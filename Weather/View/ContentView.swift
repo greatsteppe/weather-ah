@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
 
+    var vm = WeatherViewModel()
+
     var body: some View {
         VStack {
             Text("Astana")
@@ -33,7 +35,7 @@ struct ContentView: View {
                         .foregroundStyle(.white)
                         .padding(16)
                         .padding(.bottom, 16)
-                    Text("20℃")
+                    Text("20 ℃")
                         .foregroundStyle(.white)
                 }
                 .padding(8)
@@ -51,15 +53,11 @@ struct ContentView: View {
             .padding(.top, 26)
             .padding(.bottom, 0)
 
-            List {
-                WeatherCellItemView(temp: "20℃", weekDay: "Today", typeWeather: "Sunny", image: "sun.max.fill")
-                    .listRowSeparator(.hidden)
-                WeatherCellItemView(temp: "20℃", weekDay: "Today", typeWeather: "Sunny", image: "sun.max.fill")
-                    .listRowSeparator(.hidden)
-                WeatherCellItemView(temp: "20℃", weekDay: "Today", typeWeather: "Sunny", image: "sun.max.fill")
+            List(vm.arrayWeatherModel) { weather in
+                WeatherCellItemView(model: weather)
                     .listRowSeparator(.hidden)
             }
-            .listStyle(PlainListStyle())
+            .listStyle(.plain)
             .padding(.horizontal, -20)
             //.listRowSeparator(.hidden)
         }

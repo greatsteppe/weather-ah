@@ -9,20 +9,17 @@ import SwiftUI
 
 struct WeatherCellItemView: View {
 
-    var temp = ""
-    var weekDay = ""
-    var typeWeather = ""
-    var image = "sun.max.fill"
+    @ObservedObject var model: WeatherModel = WeatherModel()
 
     var body: some View {
         HStack {
             VStack {
-                Text(weekDay)
+                Text(model.weekDay)
                     .padding(16)
                     .padding(.bottom, 16)
                     .font(.title)
                     .foregroundStyle(.white)
-                Text(typeWeather)
+                Text(model.typeWeather)
                     .foregroundStyle(.white)
             }
             .padding(8)
@@ -30,11 +27,11 @@ struct WeatherCellItemView: View {
             Spacer()
 
             VStack {
-                Image(systemName: image)
+                Image(model.image)
                     .foregroundStyle(.white)
                     .padding(16)
                     .padding(.bottom, 16)
-                Text(temp)
+                Text("\(model.temp) ℃")
                     .foregroundStyle(.white)
             }
             .padding(8)
