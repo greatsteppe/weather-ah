@@ -11,6 +11,7 @@
 		560D2B822C75FF8600D0AFAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D2B812C75FF8600D0AFAA /* ContentView.swift */; };
 		560D2B842C75FF8700D0AFAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 560D2B832C75FF8700D0AFAA /* Assets.xcassets */; };
 		560D2B872C75FF8700D0AFAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 560D2B862C75FF8700D0AFAA /* Preview Assets.xcassets */; };
+		560D2B8E2C76038D00D0AFAA /* WeatherCellItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D2B8D2C76038D00D0AFAA /* WeatherCellItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		560D2B812C75FF8600D0AFAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		560D2B832C75FF8700D0AFAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		560D2B862C75FF8700D0AFAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		560D2B8D2C76038D00D0AFAA /* WeatherCellItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCellItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				560D2B7F2C75FF8600D0AFAA /* WeatherApp.swift */,
 				560D2B812C75FF8600D0AFAA /* ContentView.swift */,
+				560D2B8D2C76038D00D0AFAA /* WeatherCellItemView.swift */,
 				560D2B832C75FF8700D0AFAA /* Assets.xcassets */,
 				560D2B852C75FF8700D0AFAA /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560D2B8E2C76038D00D0AFAA /* WeatherCellItemView.swift in Sources */,
 				560D2B822C75FF8600D0AFAA /* ContentView.swift in Sources */,
 				560D2B802C75FF8600D0AFAA /* WeatherApp.swift in Sources */,
 			);
