@@ -13,7 +13,7 @@ class WeatherManager: NSObject {
 
     let weatherApi = "https://api.openweathermap.org/data/2.5/weather"
 
-    private let apiKey = "0462bc0bb46b0da7660187dd34ff095c"
+    private let apiKey = ""
 
     private let units = "metric"
 
