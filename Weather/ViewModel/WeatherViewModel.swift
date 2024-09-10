@@ -11,8 +11,13 @@ final class WeatherViewModel: ObservableObject {
 
     @Published var arrayWeatherModel: [WeatherModel] = []
 
+    @Published var curWeather: CurrentWeatherResponse?
+
+    let weatherManager = WeatherManager.shared
+
     init() {
         loadWeather()
+        getCurrentWeather()
     }
 
     func loadWeather() {
@@ -20,4 +25,20 @@ final class WeatherViewModel: ObservableObject {
             arrayWeatherModel.append(WeatherModel())
         }
     }
+
+    func getCurrentWeather() {
+        weatherManager.CurrentWeatherData(completed: { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let data):
+                    // print("DEBUG: - - - current weather data: \(data)")
+                    self.curWeather = data
+                case .failure(let error):
+                    print("DEBUG: - - - current weather eror: \(error)")
+                }
+            }
+        })
+    }
+
+
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    var vm = WeatherViewModel()
+    @StateObject var vm = WeatherViewModel()
 
     var body: some View {
         VStack {
@@ -23,7 +23,7 @@ struct ContentView: View {
                         .padding(.bottom, 16)
                         .font(.title)
                         .foregroundStyle(.white)
-                    Text("Sunny")
+                    Text("\(vm.curWeather?.weather[0].main ?? "")")
                         .foregroundStyle(.white)
                 }
                 .padding(8)
@@ -35,7 +35,7 @@ struct ContentView: View {
                         .foregroundStyle(.white)
                         .padding(16)
                         .padding(.bottom, 16)
-                    Text("20 ℃")
+                    Text("\(Int(vm.curWeather?.main.temp ?? 0)) ℃")
                         .foregroundStyle(.white)
                 }
                 .padding(8)
